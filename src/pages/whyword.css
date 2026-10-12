@@ -1,0 +1,52 @@
+.whywork-section {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 64px) clamp(14px, 3vw, 36px);
+}
+.whywork-header {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.whywork-header h1 {
+  margin: 0 0 12px;
+  color: var(--heading, #e4f4fa);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+.whywork-header p {
+  margin: 0;
+  color: var(--muted, #bfd0d9);
+  font-size: clamp(.95rem, 1.4vw, 1.05rem);
+  line-height: 1.8;
+}
+.whywork-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+.whywork-grid .about-info-card {
+  height: 100%;
+  align-items: flex-start;
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--card-bg, #102f40);
+  border-color: var(--card-border, rgba(154, 190, 207, .32));
+  box-shadow: 0 8px 22px var(--shadow, rgba(0, 0, 0, .2));
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.whywork-grid .about-info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent, #38bdf8);
+  box-shadow: 0 14px 28px var(--shadow, rgba(0, 0, 0, .24));
+}
+.whywork-grid .about-info-icon { flex-basis: 42px; width: 42px; height: 42px; font-size: 20px; }
+.whywork-grid .about-info-text h4 { margin: 0 0 8px; color: var(--heading, #e4f4fa); font-size: 1.05rem; line-height: 1.4; }
+.whywork-grid .about-info-text p { margin: 0; color: var(--muted, #bfd0d9); font-size: .92rem; line-height: 1.7; overflow-wrap: anywhere; }
+@media (max-width: 1000px) { .whywork-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+@media (max-width: 600px) {
+  .whywork-section { padding: 28px 14px 36px; }
+  .whywork-header { margin-bottom: 22px; }
+  .whywork-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .whywork-grid .about-info-card { padding: 15px; }
+}

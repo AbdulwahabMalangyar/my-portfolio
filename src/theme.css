@@ -1,0 +1,74 @@
+:root {
+  font-synthesis: none;
+  --facebook-blue: #1877f2;
+  --facebook-blue-dark: #0866ff;
+  --accent: #1877f2;
+  --nav-border: rgba(24, 119, 242, .38);
+  --focus-ring: rgba(24, 119, 242, .25);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; min-width: 320px; padding: 0; font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+button, input, textarea, select { font: inherit; }
+button, a, select { -webkit-tap-highlight-color: transparent; }
+img { max-width: 100%; }
+#root { min-height: 100vh; }
+.app-shell {
+  min-height: 100vh;
+  padding: 0 clamp(8px, 1.5vw, 18px) 24px;
+  transition: background-color 220ms ease, color 220ms ease;
+  overflow-x: clip;
+}
+.app-shell.dark {
+  --page-bg: #071426;
+  --nav-bg: #0c1e35;
+  --nav-text: #f5f8ff;
+  --control-bg: #122945;
+  --text: #e4ecf8;
+  --heading: #f5f8ff;
+  --muted: #aabbd2;
+  --card-bg: #0d2038;
+  --card-border: rgba(144, 170, 207, .2);
+  --shadow: rgba(0, 0, 0, .28);
+  --icon-bg: rgba(24, 119, 242, .15);
+  --progress-bg: rgba(255, 255, 255, .12);
+  background: radial-gradient(ellipse at top left, rgba(24,119,242,.13), transparent 38%), var(--page-bg);
+  color: var(--text);
+}
+.app-shell.light {
+  --page-bg: #f0f5ff;
+  --nav-bg: #ffffff;
+  --nav-text: #142d4e;
+  --control-bg: #f1f6ff;
+  --text: #263b57;
+  --heading: #102b4e;
+  --muted: #536982;
+  --card-bg: #ffffff;
+  --card-border: #d9e5f5;
+  --shadow: rgba(31, 72, 130, .1);
+  --icon-bg: #e6f0ff;
+  --progress-bg: #e4ecf7;
+  background: radial-gradient(ellipse at top left, rgba(24,119,242,.08), transparent 38%), var(--page-bg);
+  color: var(--text);
+}
+.app-shell.light .nav { background: rgba(255,255,255,.94); color: var(--nav-text); border-color: var(--card-border); box-shadow: 0 8px 26px var(--shadow); }
+.app-shell.light .nav a, .app-shell.light .nav button, .app-shell.light .nav select { color: var(--nav-text); }
+.app-shell.light .nav-list a:hover, .app-shell.light .nav-list a:focus-visible { color: #fff; }
+.app-shell.light .skills-header .headingP, .app-shell.light .subject, .app-shell.light .services-header h2, .app-shell.light .service-content h3, .app-shell.light .about-info-text h5 { color: var(--heading); }
+.app-shell.light .skills-header p, .app-shell.light .services-header p, .app-shell.light .about .about_left p, .app-shell.light .service-content p { color: var(--muted); }
+.app-shell.light .Skill_container, .app-shell.light .service-card, .app-shell.light .about-info-card { background: var(--card-bg); border-color: var(--card-border); box-shadow: 0 8px 22px var(--shadow); }
+.app-shell.light .skill-top { color: var(--heading); }
+.app-shell.light .skill-percent { color: #526d7a; }
+.app-shell.light .about-info-card { color: #243d49; }
+.app-shell.light .about-info-text p { color: #344f5b; }
+.app-shell.light .about-info-icon { background: #e6f0ff; color: var(--facebook-blue); }
+.app-shell.light .skill-progress { background: var(--progress-bg); }
+.app-shell.light .side { background: rgba(255,255,255,.58); border: 1px solid var(--card-border); }
+.app-shell[dir="rtl"] { text-align: right; }
+.app-shell[dir="rtl"] .nav-list { justify-content: flex-start; }
+.app-shell[dir="rtl"] .hero-buttons, .app-shell[dir="rtl"] .footer-socials { direction: rtl; }
+::selection { color: white; background: var(--facebook-blue); }
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+[id] { scroll-margin-top: 92px; }
+@media (max-width: 600px) { .app-shell { padding-inline: 7px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }

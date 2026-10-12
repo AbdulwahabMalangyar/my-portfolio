@@ -1,0 +1,31 @@
+.button {
+ 
+  background-color: rgb(2, 220, 198);
+  color: #172b32;
+  min-width: 132px;
+  min-height: 42px;
+  padding: 10px 17px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  border: 1px solid #4de7d9;
+  cursor: pointer;
+  box-shadow: 0 5px 13px var(--shadow);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+.button:hover {
+  background-color: #f1fffd;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px var(--shadow);
+}
+@media (max-width: 480px) {
+  .button { min-width: 125px; min-height: 42px; padding: 10px 14px; font-size: 13px; }
+}
+.button {
+  background-color: var(--facebook-blue, #1877f2);
+  color: #fff;
+  border: 1px solid var(--facebook-blue, #1877f2);
+}
+.button:hover { background-color: var(--facebook-blue-dark, #0866ff); color: #fff; }

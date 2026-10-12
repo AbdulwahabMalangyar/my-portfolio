@@ -1,0 +1,16 @@
+.SerContainer{
+    width:30%;
+    height:auto ;
+    padding:18px;
+    box-sizing: border-box;
+    display: block;
+    color: white;
+    text-align: center;
+    background-color: rgb(9, 61, 80);
+    border-radius: 10px;
+
+    border: 1px solid rgb(154, 146, 146);
+
+
+}
+
